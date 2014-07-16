@@ -12,4 +12,7 @@ A property editor for Umbraco 7.x to provide a sortable list of strings.
 ## Installation
 
 1. Clone the repository to `/App_Plugins/SortableStringList`
-2. A property value converter is available in [this gist](https://gist.github.com/ryanlewis/9eb27975d690b5f12e6c). This can be saved in your `/App_Code` directory
+2. Restart Umbraco
+3. Create a new data type using property editor "Sortable String List"
+
+A property value converter is available in [this gist](https://gist.github.com/ryanlewis/9eb27975d690b5f12e6c). This can be saved in your `/App_Code` directory
