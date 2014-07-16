@@ -1,0 +1,19 @@
+﻿.stringlist-property div {
+    margin-bottom: 8px;
+}
+
+.stringlist-property .icon {
+    margin: 0 2px;
+}
+
+.stringlist-property .handle {
+    display: inline-block;
+}
+
+.stringlist-property  .stringlist-remove:hover {
+    text-decoration: none;
+}
+
+.stringlist-property  .stringlist-remove.disabled {
+    color: #999;
+}

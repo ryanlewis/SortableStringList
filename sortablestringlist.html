@@ -1,0 +1,28 @@
+﻿<div ng-controller="EpiphanyStringListController" class="stringlist-property">
+    
+    <div ui-sortable="{{sortableOptions}}" ng-model="model.value">
+        <div ng-repeat="str in model.value track by $index">
+            <input type="text" class="input-xxlarge"
+                   name="stringfield"
+                   index="{{$index}}"
+                   ng-model="model.value[$index]"
+                   ng-keydown="onKeydown($event, $index)"
+                   want-focus="{{focusedRow}}"
+                   ng-required="{{allowBlanks}}" />
+            
+            <div class="handle">
+                <i class="icon icon-navigation"></i>
+            </div>
+
+            <a class="stringlist-remove" prevent-default
+               ng-click="hasMinimum() || removeRow($index)"
+               ng-class="{disabled: hasMinimum()}">
+                <i class="icon icon-remove"></i>
+            </a>
+
+        </div>
+    </div>
+    
+    
+    <button type="button" class="btn" ng-click="addRow()" ng-disabled="hasMaximum()" ng-class="{disabled: hasMaximum()}"><i class="icon icon-add"></i> Add</button>
+</div>

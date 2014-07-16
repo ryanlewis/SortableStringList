@@ -1,0 +1,40 @@
+{
+  propertyEditors: [
+    {
+      alias: "Epiphany.SortableStringList",
+      name: "Sortable String List",
+      valueType: 'JSON',
+      editor:
+      {
+        view: "~/App_Plugins/SortableStringList/sortablestringlist.html"
+      },
+
+      prevalues: {
+        fields: [
+          {
+            label: 'Minimum',
+            description: 'Minimum number of strings',
+            key: 'min',
+            view: 'number'
+          },
+          {
+            label: 'Maximum',
+            description: 'Maximum number of strings. Use 0 for infinite',
+            key: 'max',
+            view: 'number'
+          },
+          {
+            label: 'Allow blank strings',
+            description: 'If unchecked, blank strings will cause a validation error',
+            key: 'allowBlanks',
+            view: 'boolean'
+          }
+        ]
+      },
+    }
+  ],
+
+  javascript: [
+    '~/App_Plugins/SortableStringList/sortablestringlist.js',
+  ]
+}
